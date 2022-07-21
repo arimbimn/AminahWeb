@@ -16,10 +16,16 @@ class MitraLender extends BaseController
     public function index()
     {
         $mitra = $this->mitraModel->findAll();
+        foreach ($mitra as $key => $m) {
+            $persen = $m['danaTerkumpul'] / $m['danaDibutuhkan'] * 100;
+            $mitra[$key]['persen'] = $persen;
+        }
+
         $data = [
             'title' => 'Mitra Lender',
             'active' => 'mitraLender',
             'mitra' => $mitra,
+
         ];
 
         return view('pages/lender/mitraLender', $data);
