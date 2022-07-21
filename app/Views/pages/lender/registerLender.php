@@ -30,6 +30,11 @@
         .register-card-body,
         .card {
             border-radius: 20px;
+
+        }
+
+        .register-box {
+            width: 700px;
         }
     </style>
 
