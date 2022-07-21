@@ -96,79 +96,33 @@
             </div>
 
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                <?php foreach ($mitra as $m) : ?>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="course-item">
+                            <img src="assets/img/<?= $m['fotoMitra']; ?>" class="img-fluid" alt="<?= $m['namaMitra']; ?>">
+                            <div class="course-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4><?= $m['jenisMitra']; ?></h4>
+                                    <p class="price"><?= $m['jangkaWaktu']; ?></p>
+                                </div>
+                                <h3><a href="/detailMitra"><?= $m['namaMitra']; ?></a></h3>
+                                <div class="row">
+                                    <dl>
+                                        <dt class="col-sm-6">Harga</dt>
+                                        <dd class="col-sm-6"> <?= $m['danaDibutuhkan']; ?></dd>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="course-item">
-                        <img src="assets/img/aminahImg.jpg" class="img-fluid" alt="SilkySip">
-                        <div class="course-content">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h4>Toko Minuman</h4>
-                                <p class="price">12 Bulan</p>
-                            </div>
-                            <h3><a href="/login">SilkySip</a></h3>
-                            <div class="row">
-                                <dl>
-                                    <dt class="col-sm-6">Harga</dt>
-                                    <dd class="col-sm-6"> xx.xxx.xxx</dd>
-
-                                    <dt class="col-sm-6">Terkumpul</dt>
-                                    <dd class="col-sm-6">x.xxx.xxx</dd>
-                                </dl>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                        <dt class="col-sm-6">Terkumpul</dt>
+                                        <dd class="col-sm-6"><?= $m['danaTerkumpul']; ?></dd>
+                                    </dl>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="course-item">
-                        <img src="assets/img/aminahImg4.jpg" class="img-fluid" alt="SilkySip">
-                        <div class="course-content">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h4>Toko Alat Tulis</h4>
-                                <p class="price">12 Bulan</p>
-                            </div>
-                            <h3><a href="/login">Toko Alif</a></h3>
-                            <div class="row">
-                                <dl>
-                                    <dt class="col-sm-6">Harga</dt>
-                                    <dd class="col-sm-6"> xx.xxx.xxx</dd>
-
-                                    <dt class="col-sm-6">Terkumpul</dt>
-                                    <dd class="col-sm-6">x.xxx.xxx</dd>
-                                </dl>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="course-item">
-                        <img src="assets/img/aminahImg2.jpg" class="img-fluid" alt="SilkySip">
-                        <div class="course-content">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h4>Jasa Foto Copy</h4>
-                                <p class="price">12 Bulan</p>
-                            </div>
-                            <h3><a href="/login">Toko Abadi</a></h3>
-                            <div class="row">
-                                <dl>
-                                    <dt class="col-sm-6">Harga</dt>
-                                    <dd class="col-sm-6"> xx.xxx.xxx</dd>
-
-                                    <dt class="col-sm-6">Terkumpul</dt>
-                                    <dd class="col-sm-6">x.xxx.xxx</dd>
-                                </dl>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
+                <?php endforeach; ?>
+                <!-- End Course Item-->
             </div>
         </div>
     </section>

@@ -15,7 +15,7 @@ class BerandaLender extends BaseController
 
     public function index()
     {
-        $mitra = $this->mitraModel->findAll();
+        $mitra = $this->mitraModel->get_sample_mitra(3);
         $data = [
             'title' => 'Beranda Lender',
             'active' => 'berandaLender',
