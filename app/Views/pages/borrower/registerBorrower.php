@@ -20,89 +20,106 @@
 
     <style>
         .register-page {
-            background-color: whitesmoke;
+            background-color: lightgreen;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+
+        }
+
+        .register-card-body,
+        .card {
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .register-box {
+            width: 1000px;
         }
     </style>
 
 </head>
 
-<body class="hold-transition register-page mt-4 mb-4">
-
-    <div class="breadcrumbs" data-aos="fade-in">
-        <div class="container">
-            <h2>Selamat Datang Calon Mitra!</h2>
-        </div>
-    </div><!-- End Breadcrumbs -->
-
-    <div class="register-box" style="width: 1000px;">
-        <p class="login-box-msg">Harap isi data dibawah ini dengan benar</p>
-        <form class="row g-3" action="/registerBorrower" method="post">
-            <div class="col-md-6">
-                <label for="nama-umkm" class="form-label">Nama UMKM</label>
-                <input type="text" name="nama-umkm" id="nama-umkm" class="form-control" placeholder="masukkan nama usaha anda disini">
-            </div>
-            <div class="col-md-6">
-                <label for="nama-pemilik" class="form-label">Nama Pemilik UMKM (sesuai KTP)</label>
-                <input type="text" name="nama-pemilik" id="nama-pemilik" class="form-control" placeholder="masukkan nama lengkap anda disini">
-            </div>
-            <div class="col-6">
-                <label for="alamat-umkm" class="form-label">Alamat UMKM </label>
-                <input type="text" name="alamat-umkm" class="form-control" id="alamat-umkm" placeholder="masukkan alamat usaha anda disini">
-            </div>
-            <div class="col-6">
-                <label for="alamat-rumah" class="form-label">Alamat Rumah (sesuai KTP)</label>
-                <input type="text" class="form-control" id="alamat-rumah" placeholder="masukkan alamat rumah anda disini">
-            </div>
-            <div class="col-md-4">
-                <label for="input-nik" class="form-label">NIK (Nomor Induk Kependudukan)</label>
-                <input type="text" name="input-nik" class="form-control" id="input-nik" placeholder="masukkan nomor NIK anda disini">
-            </div>
-            <div class="col-md-4">
-                <label for="input-no-hp" class="form-label">Nomor Telpon/HP Aktif</label>
-                <input type="text" class="form-control" id="input-no-hp" placeholder="masukkan no. telpon/hp anda yang aktif disini">
-            </div>
-            <div class="col-md-4">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="masukkan alamat email kamu disini">
-            </div>
-            <div class="col-md-4">
-                <label for="input-rekening" class="form-label">Nomor Rekening</label>
-                <input type="text" name="input-rekening" class="form-control" id="input-rekening" placeholder="masukkan nomor rekening anda disini">
-            </div>
-            <div class="col-4">
-                <label for="input-income" class="form-label">Pendapatan UMKM per Bulan</label>
-                <input type="text" class="form-control" id="input-income" placeholder="masukkan jumlah pendapatan usaha kamu per bulan. mis : 10000">
-            </div>
-            <div class="col-4">
-                <label for="input-pengajuan" class="form-label">Jumlah Pengajuan</label>
-                <input type="text" class="form-control" id="input-pengajuan" placeholder="masukkan jumlah pengajuan kamu. mis : 10000">
-            </div>
-            <div class="mb-3 col-6">
-                <label for="file-ktp" class="form-label">Foto KTP Pemilik UMKM (unggah foto KTP anda disini) </label>
-                <input class="form-control" type="file" id="file-ktp">
-            </div>
-            <div class="mb-3 col-6">
-                <label for="file-siu" class="form-label">Foto Surat Izin Usaha (SIU) (unggah foto siu disini)</label>
-                <input class="form-control" type="file" id="file-siu">
-            </div>
-            <div class="mb-3 col-12">
-                <label for="file-foto-umkm" class="form-label">Foto UMKM (unggah foto usaha anda disini) </label>
-                <input class="form-control" type="file" id="file-foto-umkm">
-            </div>
-            <div class="mb-3 col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Saya menyatakan bahwa data yang saya masukan adalah benar
-                    </label>
+<body class="hold-transition register-page">
+    <div class="register-box">
+        <div class="card">
+            <div class="card-body register-card-body">
+                <div class="register-logo mt-0 mb-0">
+                    <a href="/">
+                        <img src="assets/img/Aminah2.png" width="150" alt="">
+                        <h4 class="register-box-msg">SELAMAT DATANG CALON MITRA!</h4>
+                    </a>
                 </div>
+                <p class="login-box-msg">Harap isi data dibawah ini dengan benar</p>
+                <form class="row g-3" action="/registerBorrower" method="post">
+                    <div class="col-md-6">
+                        <label for="nama-umkm" class="form-label">Nama UMKM</label>
+                        <input type="text" name="nama-umkm" id="nama-umkm" class="form-control" placeholder="masukkan nama usaha anda disini">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nama-pemilik" class="form-label">Nama Pemilik UMKM (sesuai KTP)</label>
+                        <input type="text" name="nama-pemilik" id="nama-pemilik" class="form-control" placeholder="masukkan nama lengkap anda disini">
+                    </div>
+                    <div class="col-6">
+                        <label for="alamat-umkm" class="form-label">Alamat UMKM </label>
+                        <input type="text" name="alamat-umkm" class="form-control" id="alamat-umkm" placeholder="masukkan alamat usaha anda disini">
+                    </div>
+                    <div class="col-6">
+                        <label for="alamat-rumah" class="form-label">Alamat Rumah (sesuai KTP)</label>
+                        <input type="text" class="form-control" id="alamat-rumah" placeholder="masukkan alamat rumah anda disini">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="input-nik" class="form-label">NIK (Nomor Induk Kependudukan)</label>
+                        <input type="text" name="input-nik" class="form-control" id="input-nik" placeholder="masukkan nomor NIK anda disini">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="input-no-hp" class="form-label">Nomor Telpon/HP Aktif</label>
+                        <input type="text" class="form-control" id="input-no-hp" placeholder="masukkan no. telpon/hp anda yang aktif disini">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="masukkan alamat email kamu disini">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="input-rekening" class="form-label">Nomor Rekening</label>
+                        <input type="text" name="input-rekening" class="form-control" id="input-rekening" placeholder="masukkan nomor rekening anda disini">
+                    </div>
+                    <div class="col-4">
+                        <label for="input-income" class="form-label">Pendapatan UMKM per Bulan</label>
+                        <input type="text" class="form-control" id="input-income" placeholder="masukkan jumlah pendapatan usaha kamu per bulan. mis : 10000">
+                    </div>
+                    <div class="col-4">
+                        <label for="input-pengajuan" class="form-label">Jumlah Pengajuan</label>
+                        <input type="text" class="form-control" id="input-pengajuan" placeholder="masukkan jumlah pengajuan kamu. mis : 10000">
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="file-ktp" class="form-label">Foto KTP Pemilik UMKM (unggah foto KTP anda disini) </label>
+                        <input class="form-control" type="file" id="file-ktp">
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="file-siu" class="form-label">Foto Surat Izin Usaha (SIU) (unggah foto siu disini)</label>
+                        <input class="form-control" type="file" id="file-siu">
+                    </div>
+                    <div class="mb-3 col-12">
+                        <label for="file-foto-umkm" class="form-label">Foto UMKM (unggah foto usaha anda disini) </label>
+                        <input class="form-control" type="file" id="file-foto-umkm">
+                    </div>
+                    <div class="mb-3 col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Saya menyatakan bahwa data yang saya masukan adalah benar
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-success">Daftarkan Usaha Saya Sekarang!</button>
+                    </div>
+                </form>
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-success">Daftarkan Usaha Saya Sekarang!</button>
-            </div>
-        </form>
-        <!-- </div>
-        </div> -->
+        </div>
 
         <!-- jQuery -->
         <script src="../../plugins/jquery/jquery.min.js"></script>
