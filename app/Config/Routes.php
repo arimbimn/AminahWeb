@@ -47,6 +47,8 @@ $routes->get('/dashboardBorrower', 'DashboardBorrower::index');
 $routes->get('/mitraLender', 'MitraLender::index');
 $routes->get('/berandaLender', 'BerandaLender::index');
 $routes->get('/dashboardAdmin', 'DashboardAdmin::index');
+$routes->get('/dataPengajuan', 'DataPengajuanAdmin::index');
+$routes->get('/detailDataPengajuan', 'DetailDataPengajuan::index');
 
 $routes->post('/login', 'Login::login');
 $routes->post('/registerLender', 'RegisterLender::registerLender');
